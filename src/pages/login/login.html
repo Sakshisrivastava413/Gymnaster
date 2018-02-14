@@ -1,0 +1,41 @@
+<ion-content padding class="login">
+  <div padding></div>
+  <ion-grid>
+    <ion-row>
+      <ion-col col-4></ion-col>
+      <ion-col col-4 style="margin-left: auto; margin-right: auto; display: block;">
+        <img src="../assets/imgs/logo.png">
+      </ion-col>
+      <ion-col col-4></ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <ion-item>
+    <ion-label floating>Email</ion-label>
+    <ion-input type="text" [(ngModel)]="user.email"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label floating>Password</ion-label>
+    <ion-input type="password" [(ngModel)]="user.password"></ion-input>
+  </ion-item>
+
+  <div padding></div>
+
+  <button ion-button block round (click)="login()">Login</button>
+  <button ion-button text-center clear block (click)="forgotPassword()" style="color: white">Forgot Password</button>
+  <div padding></div>
+  <button ion-button block round (click)="goToRegister()">New User? Register now</button>
+
+  <div padding></div>
+
+  <button ion-button block color="light" icon-left>
+    <ion-icon name="logo-googleplus" color="google" large></ion-icon>
+    Sign in with Google
+  </button>
+
+  <button ion-button block color="light" icon-left>
+    <ion-icon name="logo-facebook" color="facebook" large></ion-icon>
+    Sign in with Facebook
+  </button>
+
+</ion-content>

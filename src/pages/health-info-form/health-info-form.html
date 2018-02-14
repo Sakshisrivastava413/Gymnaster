@@ -1,0 +1,43 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Let's know a bit of you</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+
+  <ion-item>
+    <ion-label floating>Name</ion-label>
+    <ion-input type="text" [(ngModel)]="user.name"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label floating>Gender</ion-label>
+    <ion-select [(ngModel)]="user.gender">
+      <ion-option value="F">Female</ion-option>
+      <ion-option value="M">Male</ion-option>
+    </ion-select>
+  </ion-item>
+  <ion-item>
+    <ion-label floating>Date Of Birth</ion-label>
+    <ion-datetime [(ngModel)]="user.dob"></ion-datetime>
+  </ion-item>
+  <ion-item>
+    <ion-label floating>Weight (kg)</ion-label>
+    <ion-input type="number" [(ngModel)]="user.weight"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label floating>Height (cm)</ion-label>
+    <ion-input type="number" [(ngModel)]="user.height"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label floating>Fitness Goal</ion-label>
+    <ion-select [(ngModel)]="user.goal" interface="action-sheet">
+      <ion-option value="0">Weight Loss</ion-option>
+      <ion-option value="1">Bicep Devlopment</ion-option>
+      <ion-option value="2">Abs Devlopment</ion-option>
+      <ion-option value="3">Height Gain</ion-option>
+      <ion-option value="4">Others</ion-option>
+    </ion-select>
+  </ion-item>
+
+</ion-content>

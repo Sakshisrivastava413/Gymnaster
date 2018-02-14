@@ -1,0 +1,38 @@
+<ion-content padding class="login">
+  <div padding></div>
+  <ion-grid>
+    <ion-row>
+      <ion-col col-4></ion-col>
+      <ion-col col-4 style="margin-left: auto; margin-right: auto; display: block;">
+        <img src="../assets/imgs/logo.png">
+      </ion-col>
+      <ion-col col-4></ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <ion-item>
+    <ion-label floating>Name</ion-label>
+    <ion-input type="text" [(ngModel)]="user.name"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label floating>age</ion-label>
+    <ion-input type="number" [(ngModel)]="user.age"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label floating>Email</ion-label>
+    <ion-input type="email" [(ngModel)]="user.email"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label floating>Password</ion-label>
+    <ion-input type="password" [(ngModel)]="user.password"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label floating>Confirm Password</ion-label>
+    <ion-input type="password" [(ngModel)]="user.confirmedPassword"></ion-input>
+  </ion-item>
+
+  <div padding></div>
+
+  <button ion-button block round (click)="register()">Register and Login</button>
+  <button ion-button block round (click)="goToLogin()">Already registered?</button>
+</ion-content>
