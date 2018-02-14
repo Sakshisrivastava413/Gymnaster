@@ -1,6 +1,6 @@
 <ion-header>
-  <ion-navbar>
-    <ion-title>Let's know a bit of you</ion-title>
+  <ion-navbar color="primary">
+    <ion-title>Fill your info below</ion-title>
   </ion-navbar>
 </ion-header>
 
@@ -39,5 +39,23 @@
       <ion-option value="4">Others</ion-option>
     </ion-select>
   </ion-item>
+  <ion-item>
+    <ion-label floating>Blood pressure high?</ion-label>
+    <ion-select [(ngModel)]="user.highBloodPressure" interface="action-sheet">
+      <ion-option value="Y">Yes</ion-option>
+      <ion-option value="N">No</ion-option>
+    </ion-select>
+  </ion-item>
+  <ion-item>
+    <ion-label floating>Blood pressure low?</ion-label>
+    <ion-select [(ngModel)]="user.highBloodPressure">
+      <ion-option value="Y">Yes</ion-option>
+      <ion-option value="N">No</ion-option>
+    </ion-select>
+  </ion-item>
+
+  <div padding></div>
+
+  <button ion-button block round (click)="goToHome()">Let's Get Started</button>
 
 </ion-content>
